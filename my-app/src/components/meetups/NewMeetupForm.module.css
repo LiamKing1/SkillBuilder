@@ -24,7 +24,7 @@
   
   .actions {
     margin-top: 1rem;
-    text-align: right;
+    text-align: center;
   }
 
   .actions button {
@@ -36,10 +36,16 @@
     border: 1px solid #77002e;
     border-radius: 4px;
     font-weight: bold;
+    margin-bottom: 2rem;
   }
   
   .actions button:hover,
   .actions button:active {
     background-color: #a50e48;
     border-color: #a50e48;
+  }
+
+  .adjust {
+    text-align: center;
+    padding: 1.5rem;
   }

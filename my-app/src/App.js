@@ -5,6 +5,7 @@ import AllMeetups from "./pages/AllMeetups";
 import FavoriteMeetups from "./pages/FavoriteMeetups";
 import NewMeetups from "./pages/NewMeetups";
 import Layout from "./components/layout/Layout";
+import NewMeetSubmit from "./components/meetups/NewMeetSubmit";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
 
         <Route exact path="/new-meets"
         element={<NewMeetups />}
+        >
+        </Route>
+        <Route exact path="/thankyou"
+        element={<NewMeetSubmit />}
         >
         </Route>
       </Routes>

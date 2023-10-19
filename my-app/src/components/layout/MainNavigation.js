@@ -17,6 +17,9 @@ function MainNavigation() {
           <li>
             <Link to="/new-meets"> New Meetups </Link>
           </li>
+          {/* <li>
+            <Link to="/thankyou"> New Meetups </Link>
+          </li> */}
         </ul>
       </nav>
     </header>

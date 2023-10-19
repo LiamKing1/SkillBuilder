@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Card from "../userInterface/Card";
 import styleClass from "./NewMeetupForm.module.css";
 
-
 function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -22,45 +21,50 @@ function NewMeetupForm(props) {
       title: enteredTitle,
       image: enteredImage,
       address: enteredAddress,
-      description: enteredDescription 
-    }
+      description: enteredDescription,
+    };
 
-    console.log(meetupData)
-  };
+    console.log(meetupData);
+    props.onSendMeetupData(meetupData);
+    // *** Not quite working ill revisit once i get to a good place with the app to connect to a server other than firebase.
+  
+  }
 
   return (
     <Card>
       <form className={styleClass.form} onSubmit={handleSubmitForm}>
         <div className={styleClass.control}>
-          <label htmlFor="title">
-            Title
-            </label>
+          <label htmlFor="title">Title</label>
           <input type="text" required id="title" ref={titleInputRef}></input>
-          </div>
+        </div>
 
-          <div className={styleClass.control}>
-          <label htmlFor="image">
-            Location Image
-            </label>
+        <div className={styleClass.control}>
+          <label htmlFor="image">Location Image</label>
           <input type="url" required id="image" ref={imageInputRef}></input>
-          </div>
+        </div>
 
-          <div className={styleClass.control}>
-          <label htmlFor="address">
-            Address
-            </label>
-          <input type="text" required id="address" ref={addressInputRef}></input>
-          </div>
+        <div className={styleClass.control}>
+          <label htmlFor="address">Address</label>
+          <input
+            type="text"
+            required
+            id="address"
+            ref={addressInputRef}
+          ></input>
+        </div>
 
-          <div className={styleClass.control}>
-          <label htmlFor="description">
-            Description
-            </label>
-          <textarea id="description" required rows="5" ref={descriptionInputRef}></textarea>
+        <div className={styleClass.control}>
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            required
+            rows="5"
+            ref={descriptionInputRef}
+          ></textarea>
         </div>
 
         <div className={styleClass.actions}>
-            <button> Add Meetup </button>
+          <button> Add Meetup </button>
         </div>
       </form>
     </Card>
