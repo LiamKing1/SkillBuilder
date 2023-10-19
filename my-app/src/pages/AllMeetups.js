@@ -1,3 +1,6 @@
+import MeetupList from "../components/meetups/MeetupList";
+
+// Data created only for testing purposes
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -23,11 +26,14 @@ function AllMeetups() {
   return (
     <section>
       <h1>All Meetups</h1>
-      <ul>
+      {/* imported the MeetupList component and the prop that i used therin and use it to pass in the dummy data array's values*/}
+      <MeetupList meets={DUMMY_DATA} />
+      {/* Below was simply used for testing purposes */}
+      {/* <ul>
         {DUMMY_DATA.map((meetup) => {
           return <li key={meetup.id}> {meetup.title} </li>;
         })}
-      </ul> 
+      </ul>  */}
     </section>
   );
 }

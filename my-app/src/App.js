@@ -4,12 +4,11 @@ import React from "react";
 import AllMeetups from "./pages/AllMeetups";
 import FavoriteMeetups from "./pages/FavoriteMeetups";
 import NewMeetups from "./pages/NewMeetups";
-import MainNavigate from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavigate />
+    <Layout>
       <Routes>
         <Route exact path="/"
         element={<AllMeetups />}
@@ -26,7 +25,7 @@ function App() {
         >
         </Route>
       </Routes>
-    </div>
+    </Layout>
   );
 }
 
