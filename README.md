@@ -2,7 +2,7 @@
 SkillBuild
 
 ## Project Description
-For this project i wanted to showcase my knowledge of file base routing in order to keep folders as slim as i could. I also wanted to try a new implementation of firebase, which turned out successfully, along with with my use of different elements in the react library as well as standard javascript built in elements and features.
+For this project i wanted to showcase my knowledge of code-base routing in order to keep folders as slim as i could. I also wanted to try a new implementation of firebase, which turned out successfully, along with with my use of different elements in the react library as well as standard javascript built in elements and features.
 
 I created an app that allows to toggle to, see evidence of comparisson opperators and so much more.
 
